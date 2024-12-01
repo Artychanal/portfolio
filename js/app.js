@@ -1,19 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Создаем экземпляр ScrollSmoother
   ScrollSmoother.create({
-    wrapper: "#smooth-wrapper", // Обертка
-    content: "#smooth-content", // Контент
-    smooth: 1.5, // Плавность скролла
-    effects: true, // Включаем эффекты скролла
+    wrapper: "#smooth-wrapper", 
+    content: "#smooth-content", 
+    smooth: 1.5, 
+    effects: true, 
   });
 
-  // Анимация элементов при скролле
   gsap.utils.toArray(".animate-on-scroll").forEach((element) => {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 80%", // Начало анимации
-        end: "bottom 20%", // Конец анимации
+        start: "top 80%", 
+        end: "bottom 20%", 
         toggleActions: "play none none reverse",
       },
       opacity: 0,
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Параллакс эффект для фона
   gsap.to(".parallax-background", {
     scrollTrigger: {
       trigger: ".parallax-background",
@@ -34,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "none",
   });
 
-  // Анимация при наведении
   gsap.utils.toArray(".hover-animate").forEach((element) => {
     element.addEventListener("mouseenter", () => {
       gsap.to(element, { scale: 1.05, duration: 0.3, ease: "power1.out" });
