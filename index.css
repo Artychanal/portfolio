@@ -1,0 +1,224 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  /* Убираем подчеркивание при наведении */
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Стили для Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.icons a {
+  margin-left: 20px;
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #007BFF;
+}
+
+/* Стили для основного контента */
+main {
+  margin-top: 100px;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: #555;
+}
+
+/* Стили для секции "About" */
+.about {
+  background-color: #fff;
+}
+
+/* Стили для секции "Projects" */
+.projects {
+  background-color: #f0f0f0;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  width: 300px;
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+}
+
+.project h3 {
+  font-size: 24px;
+  margin: 20px;
+  color: #333;
+}
+
+.project p {
+  font-size: 16px;
+  margin: 0 20px 20px;
+  color: #555;
+}
+
+.project a {
+  display: block;
+  margin: 0 20px 20px;
+  padding: 12px;
+  background-color: #007BFF;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.project a:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для секции "Contact" */
+.contact ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact li {
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+  color: #555;
+}
+
+/* Исправление нижнего отступа для секции "Contact" */
+.contact {
+  padding-bottom: 120px; /* Увеличиваем нижний отступ */
+}
+
+/* Анимация при наведении */
+.hover-animate {
+  transition: transform 0.3s ease;
+}
+
+.hover-animate:hover {
+  transform: scale(1.05);
+}
+
+/* Начальное состояние для анимации при скролле */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Стили для параллакса (если потребуется) */
+.parallax-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-background img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .icons {
+    margin-top: 10px;
+  }
+
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+}
