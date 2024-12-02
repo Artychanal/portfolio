@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.utils.toArray(".hover-animate").forEach((element) => {
     element.addEventListener("mouseenter", () => {
-      gsap.to(element, { scale: 1.05, duration: 0.3, ease: "power1.out" });
+      gsap.to(element, { scale: 1.05, duration: 0.1, ease: "power1.out" });
     });
     element.addEventListener("mouseleave", () => {
-      gsap.to(element, { scale: 1, duration: 0.3, ease: "power1.out" });
+      gsap.to(element, { scale: 1, duration: 0.1, ease: "power1.out" });
     });
   });
 });

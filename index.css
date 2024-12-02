@@ -90,6 +90,8 @@ section p {
 /* Секция "About Me" */
 .about {
   background-color: #fff;
+  border-radius: 30px 30px 0 0;
+  margin-top: 30px;
 }
 
 .about-content {
@@ -97,7 +99,6 @@ section p {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .profile-picture {
@@ -124,6 +125,29 @@ section p {
   line-height: 1.6;
   color: #555;
   text-align: left;
+}
+
+.hire-me-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hire-me-button:hover {
+  background: linear-gradient(135deg, #5b0eaa, #1e63d6);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+.hire-me-button i {
+  margin-right: 10px;
 }
 
 /* Секция "Skills" */
@@ -163,6 +187,7 @@ section p {
 /* Секция "Projects" */
 .projects {
   background-color: #fff;
+  border-radius: 0 0 30px 30px;
 }
 
 .project-list {
